@@ -6,14 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CommonSharedPreferences {
   static CommonSharedPreferences shared = CommonSharedPreferences();
 
-  static String headerTokenKey = "user_token";
-  static String userName = "user_name";
-  static String userNik = "user_nik";
-  static String userPhone = "user_phone";
-  static String userEmail = "user_email";
-  static String userId = "user_id";
-  static String userLevel = "user_level";
-
   void save<T>(String key, T data) async {
     final preferences = await SharedPreferences.getInstance();
     if (data is String) {
